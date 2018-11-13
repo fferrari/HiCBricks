@@ -118,6 +118,13 @@ GenomicMatrix <- R6Class("GenomicMatrix",
         },
         mcool.index.keys = function(){
             return(c("indexes","bin1_offset","chrom_offset"))
+        },
+        table.formats = function(){
+            A.list <- list(
+                c("chr1", "chr2", "bin1", "bin2", "value"),
+                c("bin1", "bin2", "value"),
+                c("chr1", "chr2", "end1", "end2", "value")
+                )
         }
     ),
     private = list(
